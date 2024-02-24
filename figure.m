@@ -1,0 +1,11 @@
+data = load('result.out');
+attack = data(:,1);
+coverage_rate = data(:,2);
+log_attack = log2(attack);
+plot(log_attack,coverage_rate,'-o');
+xlabel('Log2(guess num)');
+ylabel('guess coverage rate');
+title('PCFG cracker');
+xlim([0,30]);
+ylim([0,1]);
+grid on;
